@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #000;
+    --secondary-color: #252525;
+    --tertiary-color: #fff;
+    --border : linear-gradient(120deg, #33ffd8, var(--tertiary-color));
+}
+
+#main-section {
+    height: 100vh;
+    width: 100%;
+    font-family: algeria;
+    font-weight: 400;
+    background: url(./Assets/calc-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    width: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 60px;
+    gap: 1rem;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    box-shadow: 20px 20px 20px var(--primary-color), -0px -0px 10px rgba(255, 166, 0, 0.87);
+}
+
+#display {
+    grid-column: 1/5;
+    padding: 12px;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--tertiary-color);
+    border-radius: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+    user-select: none;
+    overflow-x: scroll;
+    cursor: default;
+}
+#display::-webkit-scrollbar {
+    display: block;
+    width: 3px;
+}
+
+button {
+    font-size: 20px;
+    font-weight: 550;
+    color: var(--tertiary-color);
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 12px;
+    border: none;
+    box-shadow: inset -4px -4px 5px var(--primary-color),
+                -1px -1px 5px var(--tertiary-color);
+    cursor: pointer;
+    user-select: none;
+}
+button:hover {
+    background: #3e3e3e;
+}
+button:active {
+    box-shadow: inset 2px 2px 5px var(--primary-color),
+                -1px -1px 5px var(--tertiary-color);
+}
+
+.pink {
+    background-color: rgb(236, 156, 170);
+    color: var(--primary-color);
+}
+.pink:hover {
+    background-color: pink;
+}
+
+.orange {
+    background: rgb(206, 61, 24);
+}
+.orange:hover {
+    background: rgb(231, 90, 55);
+}
